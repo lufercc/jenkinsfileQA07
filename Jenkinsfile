@@ -3,12 +3,12 @@ pipeline {
 	 stages {
 		stage("build") {
 			 steps {
-				 bat 'echo building'
+				 bat 'gradle clean buil'
 			 }
 		}
 		 stage("test") {
 			 steps {
-				 bat 'echo Testing'
+				 bat 'gradle clean executeFeature -D environmentName="QA" -DcucumberTags="@regression"'
 			 }
 		 }
 		 stage("deploy") {
