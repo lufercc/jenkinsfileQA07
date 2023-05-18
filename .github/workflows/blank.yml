@@ -27,8 +27,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: BUILD
-        run: docker build -t automation:1.0.0 .
+        run: gradle clean build
 
       # Runs a set of commands using the runners shell
       - name: TEST
-        run: docker run automation:1.0.0
+        run: gradle clean executeFeature
