@@ -27,8 +27,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: BUILD
-        run: echo BUIDING
+        run: docker build -t automation:1.0.0 .
 
       # Runs a set of commands using the runners shell
       - name: TEST
-        run: echo TTESTING
+        run: docker run automation:1.0.0
